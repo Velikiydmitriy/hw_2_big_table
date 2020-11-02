@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ДЗ 2</title>
+    <script>
+        function sizePic() {
+            size = document.getElementById ("size").value;
+            img = document.getElementById ("pic");
+            img.width = 60 + 20*size;
+        }
+    </script>
+</head>
+<body>
+<table width="60%" border="3" align="center" cellpadding="50" cellspacing=0">
+    <tr>
+        <td>
+            <form action="https://rutracker.org/forum/index.php" method="post"> <!--тут защищенный метод передачи введеных данных -->
+                <p><select name="variant" size="1"> <!--тут высота строки выбора равна 1 -->
+                    <option selected value="s1">Вариант №1</option>
+                    <option value="s2"> Вариант №2</option>
+                    <option value="s3"> Вариант №3</option>
+                    <option value="s4"> Вариант №4</option>
+                    <option value="s5"> Вариант №5</option>
+                </select></p>
+                    <input type="submit" value="Отправить">
+            </form>
+        </td>
+        <td><form action="https://rutracker.org/forum/index.php" method="post"> <!--тут защищенный метод передачи введеных данных -->
+            <p><select name="variant" size="5" <!--тут высота строки выбора равна 5 -->
+                <option value="s1">Вариант №1</option>
+                <option value="s2">Вариант №2</option>
+                <option value="s3">Вариант №3</option>
+                <option value="s4">Вариант №4</option>
+                <option value="s5">Вариант №5</option>
+            </select></p>
+            <input type="submit" value="Отправить">
+        </form></td>
+        <td><form>
+            <p><strong>Укажите цифру:</strong></p>
+            <p><input maxlength="6" size="6" value="4"></p> <!--тут поле для ввода числа, предустановлена цифра 4 -->
+            </form>
+        </td>
+        <td><form action="https://rutracker.org/forum/index.php" method="post"> <!--тут защищенный метод передачи введеных данных -->
+            <p><select name="variant" size="1" multiple> <!--тут высота строки выбора равна 1, обязательно атрибут "multiple" -->
+                <option value="s1">Вариант №1</option>
+                <option value="s2">Вариант №2</option>
+                <option value="s3">Вариант №3</option>
+                <option value="s4">Вариант №4</option>
+                <option value="s5">Вариант №5</option>
+                </select></p>
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td><p>Размер рисунка: <input type="range" min="1" max="5" id="size" oninput="sizePic()" value="3"</p>
+            <p><img src="https://ru.inettools.net/upload/LCxUCnzZMMATnx9919zRrrd8ihHcl8EaZLFpW9LN/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_viber_2020-07-27_16-46-23.2sHjP.jpg" alt="" id="pic"></p>
+        </td>
+        <td><button type="reset">Очистить</button></td>
+        <td>
+            <form>
+            <p><input type="search" name="srch" placeholder="Поиск по сайту">
+            <input type="submit" value="Найти"></p>
+            </form>
+        </td>
+        <td><form>
+            <p><strong>Укажите цвет фона:</strong><input type="color" name="clr" value="#ff0000"></p>
+            <input type="submit" value="Выбрать"></p>
+        </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td><form action="https://rutracker.org/forum/index.php" method="post">
+            <p><b>Укажите</b></p>
+            <p><input type="radio" name="answer" value="a1"> radio BUTTON</p>
+            <p><input type="radio" name="answer" value="a2"> radio BUTTON</p>
+            <p><input type="radio" name="answer" value="a3"> radio BUTTON</p>
+            <p><input type="submit" value="submit"></p>
+        </form>
+        </td>
+        <td><form action="https://rutracker.org/forum/index.php" method="post">
+            <p><b>Введите текст:</b></p>
+            <p><textarea name="text"></textarea></p>
+            <p><input type="submit" value="submit"></p>
+        </form>
+        </td>
+        <td><form action="https://rutracker.org/forum/index.php" method="post">
+            <p><b>Укажите дату</b></p>
+            <p><input type="checkbox" name="year" value="2010">2010</p>
+            <p><input type="checkbox" name="year" value="2014">2014</p>
+            <p><input type="checkbox" name="year" value="2017">2017</p>
+            <p><input type="checkbox" name="year" value="2019">2019</p>
+            <p><input type="submit" value="Отправить"></p>
+            </form>
+        </td>
+        <td><form enctype="multipart/form-data" method="post"> <!--В форме загрузки файлов обязателен метод "post" -->
+            <p><b>Загрузите фотографии</b></p>
+            <p><input type="file" name="photo" multiple accept="image/*"></p>
+            <input type="submit" value="Отправить">
+            </form>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
